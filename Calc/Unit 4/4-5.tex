@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not alter this block (unless you're familiar with LaTeX
+\documentclass{article}[12pt]
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ, tikz}
+
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+\pagestyle{fancy}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{example}
+\newtheorem{example}{Example}[section]
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{rules}{Rule}[section]
+% prevent line break in inline mode
+\binoppenalty=\maxdimen
+\relpenalty=\maxdimen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+
+\rhead{Calculus} 
+\chead{4-5 $u$-Substitution}
+\begin{document}
+\section{Introduction}
+\begin{example}
+\begin{enumerate}
+\item Compute the derivative of $e^{x^2}$. 
+\vspace{2.5cm}
+\item Evaluate $\int 2xe^{x^2}dx$. 
+\vspace{2.5cm}
+\item Evaluate $\int 200xe^{x^2}dx$. 
+\vspace{2.5cm}
+\item Evaluate $\int xe^{x^2}dx$. 
+\vspace{2.5cm}
+\item Finding this antiderivative involves recognizing that this derivative used the chain rule. When applying the chain rule, which function was $g(x)$ (the inside function)?
+\vspace{2.5cm}
+\end{enumerate}
+\end{example}
+\begin{example}
+\begin{enumerate}
+\item Compute the derivative of $\cos(e^x)$. 
+\vspace{2.5cm}
+\item Evaluate $\int e^x\sin(e^x)dx$ 
+\vspace{2.5cm}
+\item Evaluate $\int 45e^x\sin(e^x)dx$
+\vspace{2.5cm}
+\end{enumerate}
+\end{example}
+\section{The Method of Substitution (aka $u$-substitution)}
+First we find a candidate for the ``inside" function (ie $g(x)$ for chain rule, or, commonly $u$), compute $g'(x)$, and replace $x$ and $dx$ with expressions involving $u$ and $du$ 
+Essentially:
+\[\int f(g(x))g'(x)dx=\int f(u)du,\text{ where }u=g(x)\]
+\begin{example}
+$\int x^2(3-10x^3)^4dx$
+\end{example} 
+\vspace{2.5cm}
+\section{Homework}
+\begin{enumerate}
+\item $\int 18x^2\sqrt[4]{6x^3+5}dx$
+\item $\int(1-\frac{1}{w})\cos(w-\ln(w))dw$
+\item $\int 3(8y-1)e^{4y^2-y}dy$
+\item $\int \frac{x}{\sqrt{1-4x^2}}dx$
+\item $\int 12v(7+6v^2)^7dv$
+\item $\int (x^2-3)^32xdx$
+\item $\int 6x(3x^2+4)^4dx$
+\item $\int z\sqrt{z^2-5}dz$
+\item $\int (x-1)(x^2-2x)^3dx$
+\item $\int \frac{x^2}{(x^3-3)^2}dx$
+\item $\int x^9\cos(3x^10+4)dx$
+\item $\int \cos(5x)dx$
+\end{enumerate}
+\end{document}

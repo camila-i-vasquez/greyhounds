@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not alter this block (unless you're familiar with LaTeX
+\documentclass{article}[12pt]
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ, tikz}
+ \usepackage{ulem}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+
+\pagestyle{fancy}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{example}
+\newtheorem{example}{Example}[section]
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{rules}{Rule}[section]
+% prevent line break in inline mode
+\binoppenalty=\maxdimen
+\relpenalty=\maxdimen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+
+\rhead{Calculus} 
+\chead{4-5b $u$-Substitution (again)}
+\begin{document}
+\section*{Motivation}
+The two goals of $u$-substitution are to make a hard integral into an easier one and to undo the chain rule.  \\
+\section{First Step:}
+First let's look at functions where we found the derivative using the chain rule and identify the $g(x)$ (which will be later used at the $u$). \\
+For each function below, it looks like $f'(g(x))\cdot g'(x)$, or $g'(x)\cdot f'(g(x))$, for some $f$ and $g(x)$. Identify $g(x)$. 
+\begin{enumerate}
+\item $4x(x^2+4)$
+\item $(4w^3-6w)e^{w^4-3w^2+9}$
+\item $50(6t^2-\sin(t))(2t^3+\cos(t))^{49}$
+ (this one might be hard)
+\end{enumerate}
+\section{Second Step:}
+Now that we have identified $g(x)$, let's let $u=g(x)$, and for each function below, replace $u$ with $g(x)$. At this point, every function will contain 2 variables,$u$ and the original variable.  
+\begin{enumerate}
+\item $4x(x^2+4)$
+\vspace{1.5cm}
+\item $(4w^3-6w)e^{w^4-3w^2+9}$
+\vspace{1.5cm}
+\item $50(6t^2-\sin(t))(2t^3+\cos(t))^{49}$
+\vspace{1.5cm}
+
+\end{enumerate}
+\section{Third Step:}
+If we consider the equation $u=g(x)$, and then took the derivative of both sides, we would have $u'=g'(x)$, also written and expressed as $du=g(x)dx$. So now, for each $u$ equation, find the derivative of both sides. 
+\begin{enumerate}
+\item 
+\item 
+\item 
+
+\end{enumerate}
+\section{Fourth Step:}
+Now, we should be able to see $g'(x)$ in all of our original functions. Recall that the goal was to learn a new integration technique. So let's now rewrite every original function as an integral in terms of $u$: 
+\begin{enumerate}
+\item $\int4x(x^2+4)dx$
+\vspace{1.5cm}
+\item $\int(4w^3-6w)e^{w^4-3w^2+9}dw$
+\vspace{1.5cm}
+\item $\int50(6t^2-\sin(t))(2t^3+\cos(t))^{49}dt$
+\vspace{1.5cm}
+
+\end{enumerate}
+\section{Fifth Step:}
+Each of these integrals (in terms of $u$) is objectively easier to solve than the original function. Let's solve them:
+\begin{enumerate}
+\item 
+\item 
+\item 
+\end{enumerate}
+\section{Sixth Step:}
+Now let's rewrite all of our antiderivatives so that they contain the original variable: 
+\begin{enumerate}
+\item 
+\item 
+
+\item 
+\end{enumerate}
+\section{More Practice (not homework)}
+\begin{enumerate}
+\item $\int(2x+2)e^{x^2+2x+3}dx$
+\item $\int(2x+5)(x^2+5x)^7dx$
+\item $\int xe^{x^2+1}dx$
+\item $\int \frac{x^2+1}{x^3+3x}dx$
+\item $\int (3-x)^{10}dx$
+\item $\int 5e^{5x+2}dx$
+\item $\int 8x^7(1+x^8)^31dx$
+\item $\int x^7(1+x^8)^31dx$
+\end{enumerate}
+\end{document}
